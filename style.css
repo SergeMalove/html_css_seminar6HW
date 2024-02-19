@@ -14,7 +14,7 @@ body {
 
 .header {
     display: flex;
-    height: 75px;
+    min-height: 75px;
     background: rgba(34, 34, 34, 1);
     flex-direction: row;
     justify-content: space-between;
@@ -44,12 +44,17 @@ body {
     height: 764px;
     background: rgba(241, 228, 230, 1);
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    justify-content: flex-start
+}
+
+.intro_pic {
+    margin-left: -220px;
 }
 
 .main_title {
     display: flex;
+    margin-left: 75px;
     width: 405px;
     height: 93px;
     align-items: center;
@@ -78,7 +83,7 @@ body {
 }
 
 .categories_cont {
-    height: 470px;
+    min-height: 470px;
     margin-top: 65px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -205,4 +210,118 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .intro_cont {
+        height: 368px;
+    }
+    
+    .intro_pic {
+        height: 368px;
+    }
+
+    .mt_title1 {
+        font-size: 44px;
+    }
+
+    .mt_title2 {
+        font-size: 24px;
+    }
+
+    .categories_cont {
+        min-height: 303px;
+        grid-template-rows: 168px 116px;
+    }
+
+    .category_pic {
+        height: 100%;
+        width: 100%;
+    }
+
+    .items_cont {
+        height: 1950px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 585px 585px 585px auto;
+    }
+
+    .item1 {
+        grid-column: 1 / 3;
+    }
+
+    .item3 {
+        grid-column: 1 / 3;
+    }
+
+    .main_title {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .right_header_menu {
+        flex-direction: row-reverse;
+    }
+
+    .menu_pic {
+        display: none;
+    }
+
+    .intro_cont {
+        height: 368px;
+    }
+    
+    .intro_pic {
+        display: none;
+    }
+
+    .mt_title1 {
+        font-size: 44px;
+    }
+
+    .mt_title2 {
+        font-size: 24px;
+    }
+
+    .categories_cont {
+        min-height: 303px;
+        grid-template-rows: 168px 116px;
+    }
+
+    .category_pic {
+        height: 100%;
+        width: 100%;
+    }
+
+    .items_cont {
+        height: 1950px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 585px 585px 585px auto;
+    }
+
+    .item1 {
+        grid-column: 1 / 3;
+    }
+
+    .item3 {
+        grid-column: 1 / 3;
+    }
+
+    .main_title {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+    }
 }
